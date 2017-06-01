@@ -90,13 +90,13 @@ class TocMachine(GraphMachine):
         print('Leaving ready')
 
     def on_enter_watch_monster(self, update):
-        update.message.reply_text("想看皮卡丘還是小叮噹呢？如果突然不想看的話也可以輸入“不想看了”唷！")
+        update.message.reply_text("想看“皮卡丘”還是“小叮噹”呢？如果突然不想看的話也可以輸入“不想看了”唷！")
 
     def on_exit_watch_monster(self, update):
         print('Leaving watch_monster')
 
     def on_enter_watch_dog(self, update):
-        update.message.reply_text("想看跑步的狗狗還是站著的呢？如果突然不想看的話也可以輸入“不想看了”唷！")
+        update.message.reply_text("想看“跑步的狗狗”還是“站著的狗狗”呢？如果突然不想看的話也可以輸入“不想看了”唷！")
 
     def on_exit_watch_dog(self, update):
         print('Leaving watch_dog')
@@ -111,6 +111,7 @@ class TocMachine(GraphMachine):
         update.message.reply_text("""
 (｡◕‿‿◕｡)
 """)
+        update.message.reply_text("很可愛～不是嗎～想要看更多的話也歡迎唷～")
         self.go_back(update)
 
     def on_exit_monster_sad(self, update):
@@ -142,6 +143,7 @@ class TocMachine(GraphMachine):
 ┈┈┈/\┈┈┈/\┈┈┈
 ┈┈/┈┈\┈/┈┈\┈┈
 """)
+        update.message.reply_text("很可愛～不是嗎～想要看更多的話也歡迎唷～")
         self.go_back(update)
 
     def on_exit_dog_shibe(self, update):
@@ -158,6 +160,7 @@ class TocMachine(GraphMachine):
 ┈╲╱╲╱┈┈┈╲╲▂╲▂┈┈
 ┈┈┈┈┈┈┈┈┈╲╱╲╱┈┈
 """)
+        update.message.reply_text("很可愛～不是嗎～想要看更多的話也歡迎唷～")
         self.go_back(update)
 
     def on_exit_dog_beagle(self, update):
@@ -170,6 +173,7 @@ ___(-o)>
 \.<_.-)
 .`———‘   
 """)
+        update.message.reply_text("很可愛～不是嗎～想要看更多的話也歡迎唷～")
         self.go_back(update)
 
     def on_exit_bird_seagull(self, update):
