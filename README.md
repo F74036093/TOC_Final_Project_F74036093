@@ -1,13 +1,48 @@
-# TOC_Final_Project_F74036093
+# TOC_Final_Project F74036093
 
-## 使用語言
-* python3
+## Setup
 
-## How to run?
-* 將app.py中的WEBHOOK_URL修改成適當的鍵結後再執行app.py即可
+### Prerequisite
+* Python 3
 
+#### Install Dependency
+```sh
+pip install -r requirements.txt
+```
 
-## How to interact?
+* pygraphviz (For visualizing Finite State Machine)
+    * [Setup pygraphviz on Ubuntu](http://www.jianshu.com/p/a3da7ecc5303)
+
+### Secret Data
+
+`API_TOKEN` and `WEBHOOK_URL` in app.py **MUST** be set to proper values.
+Otherwise, you might not be able to run your code.
+
+### Run Locally
+You can either setup https server or using `ngrok` as a proxy.
+
+**`ngrok` would be used in the following instruction**
+
+```sh
+ngrok http 5000
+```
+
+After that, `ngrok` would generate a https URL.
+
+You should set `WEBHOOK_URL` (in app.py) to `your-https-URL/hook`.
+
+#### Run the sever
+
+```sh
+python3 app.py
+```
+
+## Finite State Machine
+![fsm](./img/show-fsm.png)
+
+## Usage
+The initial state is set to `user`.
+
 第一步先輸入任意的文字並送出，bot就會送出歡迎訊息：
 
 ```sh
@@ -19,8 +54,3 @@
 在接下來只要輸入括號內的文字就可以看到圖片
 
 bot輸出圖片後就會回到一開始的state並等待使用者輸入任意文字
-
-
-
-## Finite State Machine
-![fsm](./img/show-fsm.png)
